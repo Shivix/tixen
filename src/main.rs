@@ -68,7 +68,7 @@ async fn acceptor() -> Result<()> {
                         if msg_type == "A" {
                             md_writer.write_all(b"8=FIX.4.49=10235=A49=SENDERMD56=TARGETMD34=152=20190605-11:40:30.39298=0108=30141=Y553=user554=password10=104\n").await.expect("failed to send logon");
                         } else if msg_type == "V" {
-                            md_writer.write_all(b"8=FIX.4.49=31335=W49=SENDERMD56=TARGETMD34=152=20230427-10:30:00.12355=AAPL268=1269=0270=175.10271=500272=20230427273=10:30:00.123279=055=GOOG268=2269=1270=1255.20271=200272=20230427273=10:30:00.123279=110=057").await.unwrap();
+                            md_writer.write_all(b"8=FIX.4.49=31335=W49=SENDERMD56=TARGETMD34=152=20230427-10:30:00.12355=EURUSD268=2269=0270=175.10271=500272=20230427273=10:30:00.123269=1270=1255.20271=200272=20230427273=10:30:00.12310=057").await.unwrap();
                         }
                         md_writer.flush().await.unwrap();
                     }
